@@ -1,13 +1,21 @@
 "use strict";
-let incr = 120,
-    decr = 120;
+let numberOfFilms = +prompt("How many films are you watched?", "");
+console.log(numberOfFilms)
 
-incr++;
-decr--;
-console.log(incr == decr);
-console.log(decr++);
+let personalMovieDb = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false
+};
 
-const isChecked = true,
-    isClose = false;
+let questionNumberOne = prompt("What was the last movie you watched?", ""),
+    questionNumberTwo = +prompt("How much would you rate it?", ""),
+    questionNumberThree = prompt("What was the last movie you watched?", ""),
+    questionNumberFour = +prompt("How much would you rate it?", "");
 
-console.log(isChecked != isClose)
+personalMovieDb.movies[questionNumberOne] = questionNumberTwo
+personalMovieDb.movies[questionNumberThree] = questionNumberFour
+
+console.log(personalMovieDb)
