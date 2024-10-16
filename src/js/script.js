@@ -26,7 +26,7 @@ function showMyDB(hidden) {
 showMyDB();
 function rememberMyFilms() {
     for (let i = 0; i < 2; i++) {
-        let questionNumberOne = prompt("What was the last movie you watched?", ""),
+        let questionNumberOne = prompt("What was the last movie you watched?", "").trim(),
             questionNumberTwo = +prompt("How much would you rate it?", "");
 
         if (questionNumberOne != null && questionNumberTwo != null && questionNumberOne != '' && questionNumberTwo != '' && questionNumberOne.length < 50) {
